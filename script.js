@@ -1,50 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Slideshow ---------------------------------------
     let slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
 
     function goToSlide(n) {
         slides[currentSlide].classList.remove('active');
-        currentSlide = (n+slides.length)%slides.length; // this line ensures we loop around to the beginning/end
+        currentSlide = (n+slides.length) % slides.length;
         slides[currentSlide].classList.add('active');
     }
 
     setInterval(() => {
         goToSlide(currentSlide + 1);
-    }, 5000); // changes slides every 5 seconds
+    }, 5000); 
+
+    // Random User Images -----------------------------
+    fetch('https://randomuser.me/api/?gender=female&results=3')
+        .then(response => response.json())
+        .then(data => {
+            const testimonials = document.querySelectorAll('.testimonial');
+            
+            testimonials.forEach((testimonial, index) => {
+            const userIcon = testimonial.querySelector('.user-icon');
+            userIcon.src = data.results[index].picture.medium;
+            });
+        })
+        .catch(error => console.error('Error fetching user data:', error));
+
+    // Banner -----------------------------------------
+    const bannerContent = document.querySelector('.banner-content');
+    const message = '<a href="mailto:email@example.com" class="contact-link">Contact us at email@example.com - We\'re here to help!</a>';
+    let messages = '';
+  
+    // Generate 10 messages
+    for (let i = 0; i < 10; i++) {
+      messages += message;
+    }
+  
+    bannerContent.innerHTML = messages + messages; // Duplicate the set of messages
+  
+    const scroll = () => {
+      // Reset the scroll position to 0 if it has reached the end of the first set of messages
+      if (bannerContent.offsetWidth + bannerContent.scrollLeft >= bannerContent.scrollWidth / 2) {
+        bannerContent.scrollLeft = 0;
+      } else {
+        bannerContent.scrollLeft += 1; // Adjust the speed as needed
+      }
+      window.requestAnimationFrame(scroll);
+    };
+  
+    scroll();
 });
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const mockups = document.querySelectorAll('.mockup');
-
-//     mockups.forEach(mockup => {
-//         mockup.addEventListener('mousemove', (event) => {
-//             // Relative mouse position
-//             const rect = mockup.getBoundingClientRect();
-//             const mouseX = event.clientX - rect.left;
-//             const mouseY = event.clientY - rect.top;
-
-//             // Center of the mockup element
-//             const centerX = rect.width / 2;
-//             const centerY = rect.height / 2;
-
-//             const deltaX = mouseX - centerX;
-//             const deltaY = mouseY - centerY;
-
-//             // Calculate rotation based on mouse position relative to element's center
-//             const percentageX = deltaX / centerX;
-//             const percentageY = deltaY / centerY;
-
-//             const rotationY = -30 * percentageX;
-//             const rotationX = 30 * percentageY;
-
-//             mockup.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-//         });
-
-//         // Reset rotation when mouse leaves the element
-//         mockup.addEventListener('mouseleave', () => {
-//             mockup.style.transform = `rotateX(0deg) rotateY(0deg)`;
-//         });
-//     });
-// });
-
+// Houdini
+CSS.paintWorklet.addModule('https://unpkg.com/parallelowow@0.1.5/parallelowow.js');
