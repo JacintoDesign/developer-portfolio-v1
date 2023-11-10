@@ -273,13 +273,23 @@ section {
   position: relative;
 }
 
+.banner-link {
+  display: block; 
+  height: 50px;
+  width: 100%; 
+  position: relative;
+  text-decoration: none; 
+  color: white;
+}
+
 .banner {
   position: absolute;
   left: 0;
   bottom: 10%;
   width: 100vw;
   height: 50px;
-  background-color: #333;
+  background-color: #7d0e0e;
+  color: white;
   overflow: hidden;
   transform: rotate(-5deg);
   transform-origin: 0 100%;
@@ -293,17 +303,21 @@ section {
   position: absolute;
   left: 0;
   animation: scrollBanner 60s linear infinite;
+  transition: font-size .3s ease-in-out;
+  font-size: 1rem;
 }
+
+  .banner-content:hover {
+    font-size: 1.05rem;
+  }
 
 @keyframes scrollBanner {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-.contact-link {
-  color: white;
-  text-decoration: none;
-  padding: 0 50px;
+.contact-message {
+  margin-right: 50px;
 }
 
 /* Footer */
