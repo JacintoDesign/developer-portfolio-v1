@@ -169,6 +169,7 @@ section {
 /* Projects Section -------------------- */
 .projects-container {
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .grid-container {
@@ -233,56 +234,6 @@ section {
 .github-link:hover, .live-link:hover {
   background-color: #333;
   color: #fff;
-}
-
-/* Testimonials Section */
-#testimonials {
-  margin-top: 100px;
-  min-height: unset;
-}
-
-.testimonials-container {
-  display: flex;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.testimonial {
-  position: relative;
-  width: 33.1%;
-  padding: 20px 50px;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: justify;
-  height: 300px;
-  overflow: hidden; 
-}
-
-.testimonial:nth-child(1) {
-  background-color: #E57373;
-}
-
-.testimonial:nth-child(2) {
-  background-color: #81C784;
-}
-
-.testimonial:nth-child(3) {
-  background-color: #64B5F6;
-}
-
-.user-icon {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.user-name {
-  font-style: italic;
 }
 
 /* Contact Section */
