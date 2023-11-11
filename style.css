@@ -106,7 +106,7 @@ nav.active {
   transform: translateX(0);
 }
 
-/* Home Section ------------------ */
+/* Home Section ------------------------ */
 #home {
   display: grid;
   place-items: center;
@@ -321,7 +321,7 @@ nav.active {
   }
 }
 
-/* Contact Section */
+/* Contact Section ---------------------- */
 #contact {
   --parallelowow-tile-width: 60;
   --parallelowow-base-color: #FF5566;
