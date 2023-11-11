@@ -19,16 +19,6 @@ section {
   min-height: 100vh;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-
-  &:hover {
-    padding-bottom: 5px;
-    border-bottom: 5px solid white;
-  }
-}
-
 /* Navigation --------------------------- */
 .menu-icon {
   position: fixed;
@@ -94,6 +84,16 @@ nav ul {
 
 nav ul li {
   margin: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+  }
 }
 
 nav.active {
@@ -289,15 +289,16 @@ nav.active {
 
 .grid-item img {
   max-width: 300px;
+  cursor: pointer;
 }
 
 .mockup {
   transform-style: preserve-3d;
   transition: transform 0.2s;
-}
 
-.mockup:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .link-container {
@@ -312,11 +313,11 @@ nav.active {
   text-decoration: none;
   transition: background-color 0.3s ease;
   color: #fff;
-}
 
-.github-link:hover, .live-link:hover {
-  background-color: #333;
-  color: #fff;
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
 }
 
 /* Contact Section */
@@ -370,11 +371,11 @@ nav.active {
   animation: scrollBanner 60s linear infinite;
   transition: font-size .3s ease-in-out;
   font-size: 1rem;
-}
 
-  .banner-content:hover {
+  &:hover {
     font-size: 1.05rem;
   }
+}
 
 @keyframes scrollBanner {
   0% { transform: translateX(0); }
@@ -402,14 +403,14 @@ footer {
 
   .social-media-icons i {
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .social-media-icons i:not(:first-child) {
     margin-left: 10px;
-  }
-
-  .social-media-icons i:hover {
-    transform: scale(1.1);
   }
 
 footer small {
