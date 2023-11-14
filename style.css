@@ -327,6 +327,7 @@ nav.active {
   --parallelowow-probability: 0.25;
   --parallelowow-stroke-weight: 0.5;
   background: paint(parallelowow), var(--parallelowow-base-color);
+  color: white;
 }
 
 .contact-container {
@@ -353,7 +354,6 @@ nav.active {
   width: 100vw;
   height: 50px;
   background-color: #7d0e0e;
-  color: white;
   overflow: hidden;
   transform: rotate(-5deg);
   transform-origin: 0 100%;
@@ -394,7 +394,6 @@ footer {
   font-size: 30px;
   position: absolute;
   bottom: 60px;
-  color: white;
   display: flex;
   justify-content: center;
 }
@@ -416,7 +415,6 @@ footer small {
   bottom: 20px;
   width: 100%;
   text-align: center;
-  color: white;
 }
 
 /* Media Queries -------------------------- */

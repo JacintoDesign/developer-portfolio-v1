@@ -32,16 +32,5 @@ let repeatedMessage = messageHTML.repeat(10); // Create a string with the messag
 // Set the repeated messages as the content
 bannerContent.innerHTML = repeatedMessage + repeatedMessage; // Duplicate for infinite scrolling
 
-function scrollBanner() {
-  if (bannerContent.scrollLeft >= bannerContent.firstChild.offsetWidth * 10) {
-    bannerContent.scrollLeft = 0; // Reset scroll position when end is reached
-  } else {
-    bannerContent.scrollLeft += 2; // Increase for a faster scroll speed
-  }
-  requestAnimationFrame(scrollBanner);
-}
-
-scrollBanner();
-
 // Houdini Worklet
 CSS.paintWorklet.addModule('https://unpkg.com/parallelowow@0.1.5/parallelowow.js');
