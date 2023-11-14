@@ -433,7 +433,7 @@ footer small {
 
 /* Tablet Vertical (Large) */
 @media screen and (orientation: portrait) and (max-width: 1180px) {
-  .about-content-container {
+  .about-grid {
     width: 80vw;
   }
 
@@ -453,7 +453,7 @@ footer small {
 
 /* Tablet Horizontal */
 @media screen and (min-width: 800px) and (max-width: 1180px) {
-  .about-content-container {
+  .about-grid {
     width: 80vw;
   }
 
@@ -525,7 +525,7 @@ footer small {
   }
 
   /* About */
-  .about-content-container {
+  .about-grid {
     grid-template-columns: 1fr;
     width: 100vw;
   }
