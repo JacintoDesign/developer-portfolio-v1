@@ -21,8 +21,8 @@ section {
 
 .section-title h2 {
   font-size: 4rem;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 500;
+  color: white;
 }
 
 /* Navigation --------------------------- */
@@ -140,9 +140,9 @@ nav.active {
   transition: opacity 2s;
 }
 
-.slide.active {
-  opacity: 1;
-}
+  .slide.active {
+    opacity: 1;
+  }
 
 /* Title */
 .page-title {
@@ -155,10 +155,9 @@ nav.active {
 }
 
 .page-title h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 5rem;
   font-weight: 200;
-  font-family: 'Barlow', sans-serif;
   margin: 0;
 }
 
@@ -166,25 +165,25 @@ nav.active {
 .mouse {
   width: 45px;
   height: 80px;
-  border: 3px solid #fff;
+  border: 3px solid white;
   border-radius: 60px;
   position: absolute;
   bottom: 20px;
 }
 
-.mouse::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheelAnimation 2s infinite;
-}
+  .mouse::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheelAnimation 2s infinite;
+  }
 
 @keyframes wheelAnimation {
   to {
@@ -199,12 +198,12 @@ nav.active {
   place-items: center;
 }
 
-.about-content-container {
+.about-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-gap: 5px;
-  color: #fff;
+  color: white;
   width: 50vw;
 }
 
@@ -215,7 +214,7 @@ nav.active {
 .box5 { grid-area: 5 / 2 / 7 / 3; }
 .box6 { grid-area: 7 / 1 / 9 / 3; }
 
-.about-content-container div {
+.about-grid div {
   background: #264653;
   display: grid;
   place-items: center;
@@ -231,8 +230,12 @@ nav.active {
 .icon-box {
   padding: 20%;
   text-align: center;
-  color: #000;
+  color: black;
 }
+
+  .icon-box i {
+    font-size: 50px;
+  }
 
 .icon-box:nth-child(2) {
   background: #2A9D8F;
@@ -248,16 +251,6 @@ nav.active {
 
 .icon-box:nth-child(5) {
   background: #E76F51;
-}
-
-.icon-box i {
-  font-size: 50px;
-}
-
-.about-content-container img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
 }
 
 /* Projects Section -------------------- */
@@ -305,16 +298,11 @@ nav.active {
 }
 
 .mockup {
-  transform-style: preserve-3d;
   transition: transform 0.2s;
 
   &:hover {
     transform: scale(1.05);
   }
-}
-
-.link-container {
-  z-index: 5;
 }
 
 .github-link, .live-link {
@@ -324,11 +312,10 @@ nav.active {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  color: #fff;
+  color: white;
 
   &:hover {
     background-color: #333;
-    color: #fff;
   }
 }
 

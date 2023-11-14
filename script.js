@@ -13,18 +13,16 @@ function hideMenu() {
 }
 
 // Slideshow ---------------------------------------
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.slide');
 
-function goToSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (n+slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
+function switchImage() {
+  images[currentImageIndex].classList.remove('active');
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].classList.add('active');
 }
 
-setInterval(() => {
-  goToSlide(currentSlide + 1);
-}, 5000); 
+setInterval(switchImage, 5000);
 
 // Banner ------------------------------------------
 const bannerContent = document.getElementById('bannerContent');
